@@ -16,6 +16,7 @@ namespace Core.Data.DB
     {
         public Teacher()
         {
+            this.ClassSections = new HashSet<ClassSection>();
             this.ClassSectionSubjectTeachers = new HashSet<ClassSectionSubjectTeacher>();
             this.TeacherExpertises = new HashSet<TeacherExpertise>();
         }
@@ -25,6 +26,7 @@ namespace Core.Data.DB
         public string Email { get; set; }
         public int DesignationId { get; set; }
     
+        public virtual ICollection<ClassSection> ClassSections { get; set; }
         public virtual ICollection<ClassSectionSubjectTeacher> ClassSectionSubjectTeachers { get; set; }
         public virtual Designation Designation { get; set; }
         public virtual Employee Employee { get; set; }

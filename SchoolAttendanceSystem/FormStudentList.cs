@@ -96,6 +96,7 @@ namespace SchoolAttendanceSystem
             dataGridView1.Rows.Clear();
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = list;
+
         }
 
         private void LoadStudentStatusComboBox()
@@ -644,6 +645,11 @@ namespace SchoolAttendanceSystem
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
+            buttonAdd.Enabled = true;
+            buttonAdd.BackColor = SystemColors.ActiveCaption;
+            buttonUpdateStudent.Enabled = false;
+            buttonUpdateStudent.BackColor = SystemColors.ControlLight;
+            comboBoxStatus.Enabled = false;
             ClearFields();
             if (dataGridView1.SelectedRows.Count < 1) return;
             var data = (StudentListViewModel)dataGridView1.SelectedRows[0].DataBoundItem;

@@ -29,6 +29,7 @@ namespace Core.Data.DB
         public int ClassTeacherId { get; set; }
     
         public virtual Class Class { get; set; }
+        public virtual Teacher Teacher { get; set; }
         public virtual ICollection<StudentClassSection> StudentClassSections { get; set; }
         public virtual ICollection<ClassSectionDayPeriodSubject> ClassSectionDayPeriodSubjects { get; set; }
         public virtual ICollection<ClassSectionSubject> ClassSectionSubjects { get; set; }

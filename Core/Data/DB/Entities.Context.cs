@@ -50,7 +50,7 @@ namespace Core.Data.DB
         public DbSet<sysdiagram> sysdiagrams { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<TeacherExpertise> TeacherExpertises { get; set; }
-        public DbSet<TempPromotionTable> TempPromotionTables { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<TempPromotionTable> TempPromotionTables { get; set; }
     }
 }

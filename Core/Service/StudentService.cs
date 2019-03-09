@@ -51,6 +51,7 @@ namespace Core.Service
             try
             {
                 _db.SaveChanges();
+                studentModel.Id = student.StudentId;
             }
             catch (Exception ex)
             {
