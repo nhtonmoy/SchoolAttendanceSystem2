@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f4534d8e49a94c71a7abf893056d70c8" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.AcademicYear" Width="1.5" PointX="7.5" PointY="28.5" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.Admin" Width="1.5" PointX="12.75" PointY="31" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.Attendance" Width="1.5" PointX="12.75" PointY="27.375" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.BaseData" Width="1.5" PointX="0.75" PointY="17.875" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.Class" Width="1.5" PointX="5.25" PointY="15.875" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.ClassSection" Width="1.5" PointX="7.5" PointY="15.875" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.ClassSectionDayPeriodSubject" Width="1.5" PointX="13.5" PointY="14.125" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.ClassSectionSubject" Width="1.5" PointX="10.5" PointY="12" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.ClassSectionSubjectTeacher" Width="1.5" PointX="18" PointY="25" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.Day" Width="1.5" PointX="11.25" PointY="9.25" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.Designation" Width="1.5" PointX="13.5" PointY="20.125" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.Employee" Width="1.5" PointX="7.5" PointY="24.625" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.Exam" Width="1.5" PointX="10.5" PointY="16.25" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.Mark" Width="1.5" PointX="12.75" PointY="22.875" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.Period" Width="1.5" PointX="11.25" PointY="5.75" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.Person" Width="1.5" PointX="5.25" PointY="21.75" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.PromotionHistory" Width="1.5" PointX="9.75" PointY="27.875" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.Setting" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.Staff" Width="1.5" PointX="9.75" PointY="32" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.Student" Width="1.5" PointX="7.5" PointY="19.75" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.StudentClassSection" Width="1.5" PointX="9.75" PointY="19.375" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.Subject" Width="1.5" PointX="8.25" PointY="12.125" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.sysdiagram" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.Teacher" Width="1.5" PointX="15.75" PointY="24.75" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.TeacherExpertise" Width="1.5" PointX="18" PointY="22.125" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.TempPromotionTable" Width="1.5" PointX="9.75" PointY="23.125" />
+        <EntityTypeShape EntityType="StudentAttendanceSystemModel.User" Width="1.5" PointX="3" PointY="26.125" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Marks_AcademicYear" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_PromotionHistory_AcademicYear" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_StudentClassSection_AcademicYear" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_TempPromotionTable_AcademicYear" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Admin_Employee" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Admin_User" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Attendance_Student" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Attendance_User" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Person_BaseData" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Person_BaseData1" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_StudentClassSection_BaseData" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_User_BaseData" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_ClassSection_Class" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_PromotionHistory_Class" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_PromotionHistory_Class1" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_TempPromotionTable_Class" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_StudentClassSection_ClassSection" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Table_1_ClassSection" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Table1_ClassSection" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_TempPromotionTable_ClassSection" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Table_1_Day" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Table_1_Period" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Table_1_Subject" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_ClassSectionSubjectTeacher_ClassSectionSubject" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Marks_ClassSectionSubject" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Table1_Subject" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_ClassSectionSubjectTeacher_Teacher" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Teacher_Designation" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Employee_Person" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Staff_Employee" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Teacher_Employee" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Marks_Exam" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Marks_Student" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Marks_User" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Person_User" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Student_Person" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_PromotionHistory_Student" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_PromotionHistory_User" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_Staff_User" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_StudentClassSection_Student" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_TempPromotionTable_Student" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_TeacherExpertise_Subject" />
+        <AssociationConnector Association="StudentAttendanceSystemModel.FK_TeacherExpertise_Teacher" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
