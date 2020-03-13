@@ -120,7 +120,7 @@ namespace Core.Service
         }
         public List<StudentListViewModel> GetStudentListByClassSection(int classSectionId)
         {
-            var activeYear = _settingService.GetCurrentYear();
+            var activeYearId = _settingService.GetCurrentYear();
             var status = EnumStatus.Current.ToString();
             var currentStatusId = _db.BaseDatas.First(x => x.Value == status).Id;
             var list = (from s in _db.Students
@@ -128,7 +128,7 @@ namespace Core.Service
                         on s.PersonId equals p.PersonId
                         join scs in _db.StudentClassSections on s.StudentId equals scs.StudentId
                         join cs in _db.ClassSections on scs.ClassSectionId equals cs.ClassSectionId
-                        where cs.ClassSectionId == classSectionId && scs.StatusId == currentStatusId && scs.YearId == activeYear
+                        where cs.ClassSectionId == classSectionId && scs.StatusId == currentStatusId && scs.YearId == activeYearId
                         select new StudentListViewModel
                         {
                             Id = s.StudentId,
@@ -172,6 +172,7 @@ namespace Core.Service
 
         public List<StudentListViewModel> SearchStudentList(string text, int classecId)
         {
+            var activeYearId = _settingService.GetCurrentYear();
             var list = (from s in _db.Students
                         join p in _db.People
                         on s.PersonId equals p.PersonId
@@ -179,7 +180,7 @@ namespace Core.Service
                         on s.StudentId equals scs.StudentId
                         join ac in _db.AcademicYears
                         on scs.YearId equals ac.YearId
-                        where p.Name.Contains(text) && scs.ClassSectionId == classecId && ac.IsCurrent
+                        where p.Name.Contains(text) && scs.ClassSectionId == classecId && ac.IsCurrent && scs.YearId==activeYearId
                         select new StudentListViewModel { Name = p.Name, Id = s.StudentId, IdNumber = s.IdNumber, IsActive = s.IsActive ? "Yes" : "No" }).ToList();
             return list;
         }
